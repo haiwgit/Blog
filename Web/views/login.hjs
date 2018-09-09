@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/modules/common/css/default.css' />
+    <link rel='stylesheet' href='/modules/common/css/login.css' />
+  </head>
+  <body>
+    <div class="login-full">
+      <div class="login-div">
+        <div class=""></div>
+      </div>
+    </div>
+  </body>
+</html>

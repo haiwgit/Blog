@@ -14,13 +14,13 @@ define(function () {
                 views: {
                     "lazyLoadView": {
                         controller: 'indexController',
-                        templateUrl: 'modules/indexManager/views/index.html'
+                        templateUrl: '/src/modules/indexManager/views/index.html'
                     }
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                         return $ocLazyLoad.load({
-                            files: ['modules/indexManager/controllers/indexController.js']//js文件地址
+                            files: ['/src/modules/indexManager/controllers/indexController.js']//js文件地址
                         })
                     }]
                 }
@@ -29,13 +29,13 @@ define(function () {
                 views: {
                     "lazyLoadView": {
                         controller: 'blogController',
-                        templateUrl: 'modules/blogManager/views/blog.html'
+                        templateUrl: '/src/modules/blogManager/views/blog.html'
                     }
                 },
                 resolve: {
                     loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
                         return $ocLazyLoad.load({
-                            files: ['modules/blogManager/controllers/blogController.js']//js文件地址
+                            files: ['/src/modules/blogManager/controllers/blogController.js']//js文件地址
                         })
                     }]
                 }

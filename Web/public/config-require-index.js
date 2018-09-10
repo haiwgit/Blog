@@ -12,9 +12,9 @@ require.config({
         'echarts': '/lib/Echarts/echarts.min',
         'oclazyload': '/lib/oclazyload/ocLazyLoad.min',
         //配置文件夹
-        'ctrls': '/modules',
+        'ctrls': '/src',
         //路由文件
-        'index-module': '/modules/common/bootstraps/index-module',
+        'index-module': '/src/bootstraps/index-module',
     },
     shim: {
         'angular': { exports: 'angular' },
@@ -26,5 +26,5 @@ require.config({
         'ui-bootstrap-tpls': ['angular', 'ui-bootstrap'],
         'index-module': ['angular', 'oclazyload', 'angular-animate', 'angular-cookies', 'angular-ui-router', 'ui-bootstrap-tpls'],
     },
-    deps: ['modules/common/bootstraps/indexBootstrap.js']
+    deps: ['src/bootstraps/indexBootstrap.js']
 });

@@ -4,8 +4,8 @@
 <head>
   <title>{{ title }}</title>
   <link rel="shortcut icon" href="/images/favicon.ico">
-  <link rel='stylesheet' href='/modules/common/css/default.css' />
-  <link rel='stylesheet' href='/modules/common/css/common.css' />
+  <link rel='stylesheet' href='/src/modules/common/css/default.css' />
+  <link rel='stylesheet' href='/src/modules/common/css/common.css' />
   <link rel='stylesheet' href='/lib/bootstrap/css/bootstrap.css' />
   <link rel='stylesheet' href='/lib/bootstrap/css/bootstrap.min.css' />
   <script src="/lib/jquery/jquery-3.3.1.min.js"></script>
@@ -17,7 +17,7 @@
 <body>
   <div class="comm-full" >
     <div class="comm-top" ng-controller="navController">
-      <div style="height:100%;" ng-include src="'modules/common/views/navcom.html'"></div>
+      <div style="height:100%;" ng-include src="'/src/modules/common/views/navcom.html'"></div>
     </div>
     <div class="comm-center">
       <div class="view-div">

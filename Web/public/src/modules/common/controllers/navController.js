@@ -1,7 +1,7 @@
 define(['index-module'], function (app) {
     'use strict';
     angular.module("indexModule").controller('navController', function ($rootScope, $scope, $state, $ocLazyLoad) {
-        $ocLazyLoad.load('modules/indexManager/controllers/indexController.js');
+        $ocLazyLoad.load('src/modules/indexManager/controllers/indexController.js');
         $scope.bolgName = "个人网站";
         $scope.currentParem = null;
         $scope.navslist = [{

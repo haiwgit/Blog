@@ -1,5 +1,5 @@
 require([
-    'index-module','ctrls/modules/common/controllers/navController','src/modules/indexManager/controllers/indexController.js'
+    'index-module', 'ctrls/common/routerController'
 ], function () {
     'use strict';
     angular.bootstrap(document, ['indexModule']);

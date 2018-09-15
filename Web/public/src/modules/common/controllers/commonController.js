@@ -1,6 +1,6 @@
 define(['index-module',
-], function () {
+], function (app) {
     'use strict';
-    angular.module("indexModule").controller('commonController', function ($rootScope, $scope, $location, $state, $window, $ocLazyLoad) {
+    app.controller('commonController', function ($rootScope, $scope, $location, $state, $window, $ocLazyLoad) {
     })
 })

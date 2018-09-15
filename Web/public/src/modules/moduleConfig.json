@@ -1,0 +1,16 @@
+[
+    {
+        "title": "首页",
+        "parem": "index",
+        "rate": "/index",
+        "module":"indexManager",
+        "moduleCode": 1
+    },
+    {
+        "title": "文章",
+        "parem": "blog",
+        "rate": "/blog",
+        "module":"blogManager",
+        "moduleCode": 2
+    }
+]

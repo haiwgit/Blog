@@ -12,7 +12,7 @@ require.config({
         'echarts': '/lib/Echarts/echarts.min',
         'oclazyload': '/lib/oclazyload/ocLazyLoad.min',
         //配置文件夹
-        'ctrls': '/src',
+        'ctrls':'/src/modules',
         //路由文件
         'index-module': '/src/bootstraps/index-module',
     },

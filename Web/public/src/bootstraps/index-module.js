@@ -4,42 +4,57 @@ define(function () {
     app.config(["$stateProvider", "$locationProvider", "$urlRouterProvider", "$ocLazyLoadProvider",
         function ($stateProvider, $locationProvider, $urlRouterProvide, $ocLazyLoadProvider) {
             $urlRouterProvide.otherwise("/");
-            $urlRouterProvide.when("/", "/index");
             $locationProvider.hashPrefix("");
-            $ocLazyLoadProvider.config({
-                events: true
-            });
-            $stateProvider.state("index", {
-                url: "/index",
-                views: {
-                    "lazyLoadView": {
-                        controller: 'indexController',
-                        templateUrl: '/src/modules/indexManager/views/index.html'
-                    }
-                },
-                resolve: {
-                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load({
-                            files: ['/src/modules/indexManager/controllers/indexController.js']//js文件地址
-                        })
-                    }]
-                }
-            }).state("blog", {
-                url: "/blog",
-                views: {
-                    "lazyLoadView": {
-                        controller: 'blogController',
-                        templateUrl: '/src/modules/blogManager/views/blog.html'
-                    }
-                },
-                resolve: {
-                    loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load({
-                            files: ['/src/modules/blogManager/controllers/blogController.js']//js文件地址
-                        })
-                    }]
-                }
-            })
+            $stateProvider
+                .state("/", {
+                    url: "/",
+                    views: {
+                        'lazyLoadView': {
+                            templateUrl: '/src/modules/common/views/common.html'
+                        },
 
-        }])
+                    }
+                }).state("index", {
+                    url: "/index",
+                    views: {
+                        'lazyLoadView': {
+                            controller: 'indexController',
+                            templateUrl: '/src/modules/indexManager/views/index.html'
+                        },
+
+                    },
+                    resolve: {
+                        loadMyCtrl: ['$ocLazyLoad', '$injector', function ($ocLazyLoad, $injector) {
+                            return $ocLazyLoad.load({
+                                files: [getTempPath('indexManager')]
+                            })
+                        }]
+                    }
+
+                }).state("blog", {
+                    url: "/blog",
+                    views: {
+                        "lazyLoadView": {
+                            controller: 'blogController',
+                            templateUrl: '/src/modules/blogManager/views/blog.html'
+                        }
+                    },
+                    resolve: {
+                        loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+                            return $ocLazyLoad.load({
+                                files: [getTempPath('blogManager')]//js文件地址
+                            })
+                        }]
+                    }
+                })
+
+
+
+
+        }
+    ]);
+    function getTempPath(value) {
+        return 'src/modules/' + value + '/routerController.js'
+    }
+    return app;
 })

@@ -35,24 +35,26 @@
     }
 
     .nav-center ul li {
-        padding: 10px 25px;
+        padding: 10px 30px;
         text-align: center;
-        line-height: 60px;
+        line-height: 70px;
         list-style-type: none;
     }
-    .nav-center ul li:hover{
-        background-color: white;
+    .nav-selected label {
+        color: white !important;
     }
+
     .nav-center ul li label {
         margin-bottom: 0px;
-        color: #fff;
-        text-shadow: 3px 3px 3px #c7c7c7;
+        color: lightblue;
         font-size: 16px;
         font-weight: 500;
     }
-    .nav-center ul li:hover label{
-        color: #169fe6;
+
+    .nav-center ul li:hover label {
+        color: white;
     }
+
     .nav-right {
         width: 120px;
         height: 100%;
@@ -64,7 +66,7 @@
     </div>
     <div class="nav-center">
         <ul>
-            <li ng-repeat="nav in navslist" ng-click="navClick(nav)">
+            <li ng-repeat="nav in navslist" ng-class="{true:'nav-selected',false:''}[currentParem.moduleCode==nav.moduleCode]" ng-click="navClick(nav)">
                 <label ng-bind="nav.title"></label>
             </li>
         </ul>

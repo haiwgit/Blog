@@ -13,8 +13,16 @@ require.config({
         'oclazyload': '/lib/oclazyload/ocLazyLoad.min',
         //配置文件夹
         'ctrls':'/src/modules',
-        //路由文件
+        //模块文件
+        'common-module': '/src/bootstraps/common-module',
         'index-module': '/src/bootstraps/index-module',
+        'indexService':'/src/modules/indexManager/services/indexManagerService',
+        'common-filter':'/src/filters/common-filter',
+        'common-directive':'/src/directives/common-directive',
+
+        //公共服务
+        'config':'/src/services/config-service',
+        'http':'/src/modules/common/services/httpCommonService'
     },
     shim: {
         'angular': { exports: 'angular' },
@@ -24,7 +32,8 @@ require.config({
         'oclazyload': ['angular'],
         'ui-bootstrap': ['angular', 'angular-animate'],
         'ui-bootstrap-tpls': ['angular', 'ui-bootstrap'],
-        'index-module': ['angular', 'oclazyload', 'angular-animate', 'angular-cookies', 'angular-ui-router', 'ui-bootstrap-tpls'],
+        'common-module': ['angular'],
+        'index-module': ['angular', 'oclazyload', 'angular-animate', 'angular-cookies', 'angular-ui-router', 'ui-bootstrap-tpls','common-module'],
     },
     deps: ['src/bootstraps/indexBootstrap.js']
 });

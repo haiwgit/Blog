@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{ title }}</title>
-    <link rel='stylesheet' href='/modules/common/css/default.css' />
-    <link rel='stylesheet' href='/modules/common/css/login.css' />
-  </head>
-  <body>
-    <div class="login-full">
-      <div class="login-div">
-        <div class=""></div>
-      </div>
-    </div>
-  </body>
+
+<head>
+  <title>{{ title }}</title>
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel='stylesheet' href='/src/modules/common/css/default.css' />
+  <link rel='stylesheet' href='/src/modules/common/css/common.css' />
+  <link rel='stylesheet' href='/lib/bootstrap/css/bootstrap.css' />
+  <link rel='stylesheet' href='/lib/bootstrap/css/bootstrap.min.css' />
+  <script src="/lib/jquery/jquery-3.3.1.min.js"></script>
+  <script src="/lib/bootstrap/js/bootstrap.js"></script>
+  <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/lib/require.js" defer async data-main="config-require-login.js"></script>
+</head>
+
+<body>
+  <div class="login-full">
+    <div ui-view></div>
+  </div>
+</body>
+
 </html>

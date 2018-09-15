@@ -1,6 +1,6 @@
 define(function () {
     'use strict';
-    var app = angular.module("indexModule", ["ui.router", "oc.lazyLoad", 'ngCookies', 'ngAnimate', 'ui.bootstrap']);
+    var app = angular.module("indexModule", ["ui.router", "oc.lazyLoad", 'ngCookies', 'ngAnimate', 'ui.bootstrap', 'commonModule']);
     app.config(["$stateProvider", "$locationProvider", "$urlRouterProvider", "$ocLazyLoadProvider",
         function ($stateProvider, $locationProvider, $urlRouterProvide, $ocLazyLoadProvider) {
             $urlRouterProvide.otherwise("/");

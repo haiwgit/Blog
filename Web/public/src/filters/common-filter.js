@@ -1,7 +1,7 @@
-define([
-    'common-module'
-], function (app) {
+define(['angular'
+], function (angular) {
     'use strict';
+    var app=angular.module('commonModule');
     app.filter('limitLength', function () {
         return function (input, len) {
             if (typeof input === 'string' && typeof len === 'number') {

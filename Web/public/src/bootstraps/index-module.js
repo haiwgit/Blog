@@ -26,7 +26,10 @@ define(function () {
                     resolve: {
                         loadMyCtrl: ['$ocLazyLoad', '$injector', function ($ocLazyLoad, $injector) {
                             return $ocLazyLoad.load({
-                                files: [getTempPath('indexManager')]
+                                files: [
+                                    '/src/modules/indexManager/services/indexManagerService',
+                                    getTempPath('indexManager')
+                                ]
                             })
                         }]
                     }

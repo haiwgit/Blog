@@ -16,7 +16,7 @@ require.config({
         //模块文件
         'common-module': '/src/bootstraps/common-module',
         'index-module': '/src/bootstraps/index-module',
-        'indexService':'/src/modules/indexManager/services/indexManagerService',
+        //'indexService':'/src/modules/indexManager/services/indexManagerService',
         'common-filter':'/src/filters/common-filter',
         'common-directive':'/src/directives/common-directive',
 
@@ -33,6 +33,8 @@ require.config({
         'ui-bootstrap': ['angular', 'angular-animate'],
         'ui-bootstrap-tpls': ['angular', 'ui-bootstrap'],
         'common-module': ['angular'],
+        'common-directive':['angular','common-module'],
+        'common-filter':['angular','common-module'],
         'index-module': ['angular', 'oclazyload', 'angular-animate', 'angular-cookies', 'angular-ui-router', 'ui-bootstrap-tpls','common-module'],
     },
     deps: ['src/bootstraps/indexBootstrap.js']

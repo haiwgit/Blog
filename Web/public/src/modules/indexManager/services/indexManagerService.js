@@ -1,9 +1,4 @@
-define([
-    'index-module',
-    'http'
-], function() {
-    'use strict';
-    var app=angular.module('indexService',[]).factory('indexManagerService' ,function(http){
+angular.module('indexModule', ['http']).factory('indexManagerService' ,function(http){
         var service={
             getUserInfo:function(callback){
                 var url="/Sys/Auth/Login?Id="+10;
@@ -30,5 +25,3 @@ define([
         }
         return service;
     });
-    return app;
-});

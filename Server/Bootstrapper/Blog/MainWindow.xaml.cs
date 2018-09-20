@@ -1,6 +1,12 @@
-﻿using Nefarian.Startup;
+﻿using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg.Db;
+using Microsoft.Practices.Unity;
+using Nefarian.Exchange;
+using Nefarian.Startup;
+using NHibernate;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -76,12 +82,47 @@ namespace Blog
 
         private void boot_OnServiceOpened(object sender, ServiceOpenEventArgs e)
         {
-            throw new NotImplementedException();
+            Dispatcher.Invoke(() => {
+                foreach (Uri u in e.EndpointsAddress)
+                {
+                    txtMsg.AppendText(u.AbsoluteUri);
+                    txtMsg.AppendText(Environment.NewLine);
+                }
+            });
         }
 
         private void boot_PreInitModules(object sender, BootstrapperEventArgs e)
         {
             string conStr = ConfigurationManager.ConnectionStrings["MsSql"].ConnectionString;
+            FluentConfiguration config = Fluently.Configure();
+            foreach (Nefarian.Configuration.ModuleConfiguration module in e.Configuration.Modules)
+            {
+                config.Mappings(x => x.FluentMappings.AddFromAssembly(module.ModuleType.Assembly));
+            }
+            config.Database(MsSqlConfiguration.MsSql2008.ConnectionString(conStr));
+            config.CurrentSessionContext("wcf_operation");
+
+            ISessionFactory sessionFactory;
+            bool debugSQL = false;
+            bool.TryParse(ConfigurationManager.AppSettings["DebugSQL"], out debugSQL);
+            if (debugSQL)
+            {
+                NHibernate.Cfg.Configuration nhibernateConfig = config.BuildConfiguration();
+                nhibernateConfig.Properties["show_sql"] = "true";
+                nhibernateConfig.Properties["format_sql"] = "true";
+                sessionFactory = nhibernateConfig.BuildSessionFactory();
+            }
+            else
+            {
+                sessionFactory = config.BuildSessionFactory();
+            }
+            IUnityContainer appCon = Nefarian.Core.WebServiceSite.GetAppContainer();
+            appCon.RegisterInstance<ISessionFactory>("Blog", sessionFactory);
+            ExchangeCenter exchange = new ExchangeCenter();
+            appCon.RegisterInstance<ExchangeCenter>(exchange);
+            MessagePublisher publisher = new MessagePublisher();
+            appCon.RegisterInstance<MessagePublisher>(publisher);
+
         }
 
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

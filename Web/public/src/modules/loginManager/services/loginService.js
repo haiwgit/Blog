@@ -5,7 +5,7 @@ define(['common-module', 'config'], function (app) {
 
     app.factory('loginService', function ($http) {
 		var svc = {
-			signin: function (account, password) {
+			signin: function (account, password,callBack) {
 				return $http.post(config.getAddress() + '/Sys/Auth/Login',
 					{
 						"account": account,

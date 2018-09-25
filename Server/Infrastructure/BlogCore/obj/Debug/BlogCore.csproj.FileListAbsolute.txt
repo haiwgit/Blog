@@ -1,0 +1,13 @@
+J:\Work\Blog\Server\Infrastructure\BlogCore\bin\Debug\BlogCore.dll
+J:\Work\Blog\Server\Infrastructure\BlogCore\bin\Debug\BlogCore.pdb
+J:\Work\Blog\Server\Infrastructure\BlogCore\bin\Debug\Nefarian.dll
+J:\Work\Blog\Server\Infrastructure\BlogCore\bin\Debug\Newtonsoft.Json.dll
+J:\Work\Blog\Server\Infrastructure\BlogCore\bin\Debug\Nefarian.xml
+J:\Work\Blog\Server\Infrastructure\BlogCore\obj\Debug\BlogCore.csprojAssemblyReference.cache
+J:\Work\Blog\Server\Infrastructure\BlogCore\obj\Debug\BlogCore.csproj.CoreCompileInputs.cache
+J:\Work\Blog\Server\Infrastructure\BlogCore\obj\Debug\BlogCore.csproj.CopyComplete
+J:\Work\Blog\Server\Infrastructure\BlogCore\obj\Debug\BlogCore.dll
+J:\Work\Blog\Server\Infrastructure\BlogCore\obj\Debug\BlogCore.pdb
+J:\Work\Blog\Server\Infrastructure\BlogCore\bin\Debug\FluentNHibernate.dll
+J:\Work\Blog\Server\Infrastructure\BlogCore\bin\Debug\NHibernate.dll
+J:\Work\Blog\Server\Infrastructure\BlogCore\bin\Debug\Iesi.Collections.dll

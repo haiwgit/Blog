@@ -1,0 +1,10 @@
+J:\Work\Blog\Server\Modules\SystemManager\bin\Debug\SystemManager.dll
+J:\Work\Blog\Server\Modules\SystemManager\bin\Debug\SystemManager.pdb
+J:\Work\Blog\Server\Modules\SystemManager\bin\Debug\Nefarian.dll
+J:\Work\Blog\Server\Modules\SystemManager\bin\Debug\Newtonsoft.Json.dll
+J:\Work\Blog\Server\Modules\SystemManager\bin\Debug\Nefarian.xml
+J:\Work\Blog\Server\Modules\SystemManager\obj\Debug\SystemManager.csprojAssemblyReference.cache
+J:\Work\Blog\Server\Modules\SystemManager\obj\Debug\SystemManager.csproj.CoreCompileInputs.cache
+J:\Work\Blog\Server\Modules\SystemManager\obj\Debug\SystemManager.csproj.CopyComplete
+J:\Work\Blog\Server\Modules\SystemManager\obj\Debug\SystemManager.dll
+J:\Work\Blog\Server\Modules\SystemManager\obj\Debug\SystemManager.pdb

@@ -30,8 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\..\packages\nHibernate3.3.0\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Nefarian">
+      <HintPath>..\..\packages\Nefarian.2.2.0.34720\lib\Nefarian.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlogCoreModule.cs" />
+    <Compile Include="Entites\SystemManager\Users.cs" />
+    <Compile Include="Mapping\SystemManager\UsersMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

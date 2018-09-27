@@ -1,6 +1,7 @@
 define(['index-module',
     'common-filter',
-    'common-directive'],
+    'common-directive',
+    'http'],
     function (app) {
         'use strict';
         app.controller('navController', function ($rootScope, $scope, $state, $ocLazyLoad, $http) {

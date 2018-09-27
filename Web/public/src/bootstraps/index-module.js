@@ -1,8 +1,12 @@
 define(function () {
     'use strict';
     var app = angular.module("indexModule", ["ui.router", "oc.lazyLoad", 'ngCookies', 'ngAnimate', 'ui.bootstrap', 'commonModule']);
-    app.config(["$stateProvider", "$locationProvider", "$urlRouterProvider", "$ocLazyLoadProvider",
-        function ($stateProvider, $locationProvider, $urlRouterProvide, $ocLazyLoadProvider) {
+    app.config(["$stateProvider", "$locationProvider", "$urlRouterProvider", "$ocLazyLoadProvider","$controllerProvider","$provide",
+        function ($stateProvider, $locationProvider, $urlRouterProvide, $ocLazyLoadProvider,$controllerProvider,$provide) {
+            app.controller=$controllerProvider.register,
+            app.factory=$provide.factory,
+            app.service=$provide.service,
+            app.constant=$provide.constant,
             $urlRouterProvide.otherwise("/");
             $locationProvider.hashPrefix("");
             $stateProvider
@@ -26,8 +30,9 @@ define(function () {
                     resolve: {
                         loadMyCtrl: ['$ocLazyLoad', '$injector', function ($ocLazyLoad, $injector) {
                             return $ocLazyLoad.load({
+                                debug:true,
                                 files: [
-                                    '/src/modules/indexManager/services/indexManagerService',
+                                    '/src/modules/indexManager/services/indexManagerService.js',
                                     getTempPath('indexManager')
                                 ]
                             })

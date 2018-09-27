@@ -1,9 +1,8 @@
-define(['common-module'], function (svc) {
+define(['common-module','config'], function (svc,config) {
     'use strict';
     svc.factory('http', function ($http, $cookies, $window) {
         var authID = newGuid();//$cookies.get('AUTH_ID');
-        //var config = require('config');
-        //var hostAddress = config.getAddress();
+        var hostAddress = config.getAddress();
         var hearders = {
             'Content-Type': 'application/json;charset=UTF-8',
             'AUTH_ID': authID

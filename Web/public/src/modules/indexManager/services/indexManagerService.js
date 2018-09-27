@@ -1,5 +1,6 @@
-angular.module('indexModule').factory('indexManagerService', function () {
-    var app=require('http');
+
+angular.module('indexModule').factory('indexManagerService', function (http) {
+    //var app = require('http');
     var service = {
         getUserInfo: function (callback) {
             var url = "/Sys/Auth/Login?Id=" + 10;

@@ -35,6 +35,7 @@ require.config({
         'common-module': ['angular'],
         'common-directive':['angular','common-module'],
         'common-filter':['angular','common-module'],
+        'http':['angular','common-module'],
         'index-module': ['angular', 'oclazyload', 'angular-animate', 'angular-cookies', 'angular-ui-router', 'ui-bootstrap-tpls','common-module'],
     },
     deps: ['src/bootstraps/indexBootstrap.js']

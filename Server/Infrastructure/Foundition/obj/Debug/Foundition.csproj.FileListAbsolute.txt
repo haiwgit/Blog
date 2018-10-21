@@ -1,0 +1,14 @@
+J:\Work\Blog\Server\Infrastructure\Foundition\bin\Debug\Foundition.dll
+J:\Work\Blog\Server\Infrastructure\Foundition\bin\Debug\Foundition.pdb
+J:\Work\Blog\Server\Infrastructure\Foundition\bin\Debug\Microsoft.Practices.Unity.dll
+J:\Work\Blog\Server\Infrastructure\Foundition\bin\Debug\Nefarian.dll
+J:\Work\Blog\Server\Infrastructure\Foundition\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+J:\Work\Blog\Server\Infrastructure\Foundition\bin\Debug\Newtonsoft.Json.dll
+J:\Work\Blog\Server\Infrastructure\Foundition\bin\Debug\Microsoft.Practices.Unity.xml
+J:\Work\Blog\Server\Infrastructure\Foundition\bin\Debug\Nefarian.xml
+J:\Work\Blog\Server\Infrastructure\Foundition\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+J:\Work\Blog\Server\Infrastructure\Foundition\obj\Debug\Foundition.csproj.CoreCompileInputs.cache
+J:\Work\Blog\Server\Infrastructure\Foundition\obj\Debug\Foundition.csproj.CopyComplete
+J:\Work\Blog\Server\Infrastructure\Foundition\obj\Debug\Foundition.dll
+J:\Work\Blog\Server\Infrastructure\Foundition\obj\Debug\Foundition.pdb
+J:\Work\Blog\Server\Infrastructure\Foundition\obj\Debug\Foundition.csprojAssemblyReference.cache

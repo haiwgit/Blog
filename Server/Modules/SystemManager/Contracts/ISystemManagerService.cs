@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blog.BlogCore.Entites.SystemManager;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -11,7 +12,10 @@ namespace Blog.SystemManager.Contracts
     [ServiceContract]
     interface ISystemManagerService
     {
-        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
-        string GetString(string name);
+        [WebInvoke(Method = "POST", RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        string Register(UserInfo info);
+
+        [WebGet(UriTemplate = "/GetUserInfoList/")]
+        List<UserInfo> GetUserInfoList();
     }
 }

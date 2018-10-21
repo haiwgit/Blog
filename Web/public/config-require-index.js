@@ -13,6 +13,7 @@ require.config({
         'oclazyload': '/lib/oclazyload/ocLazyLoad.min',
         //配置文件夹
         'ctrls':'/src/modules',
+        'images':'/images',
         //模块文件
         'common-module': '/src/bootstraps/common-module',
         'index-module': '/src/bootstraps/index-module',

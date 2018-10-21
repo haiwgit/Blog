@@ -33,6 +33,9 @@
     <Reference Include="Nefarian">
       <HintPath>..\..\packages\Nefarian.2.2.0.34720\lib\Nefarian.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\packages\nHibernate3.3.0\lib\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ServiceModel" />
@@ -45,10 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IAuthManagerService.cs" />
     <Compile Include="Contracts\ISystemManagerService.cs" />
+    <Compile Include="Services\AuthManagerService.cs" />
     <Compile Include="Services\SystemManagerService.cs" />
     <Compile Include="SystemManagerModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\BlogCore\BlogCore.csproj">
+      <Project>{6603C20B-B17E-4876-8311-E44AC44A0929}</Project>
+      <Name>BlogCore</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

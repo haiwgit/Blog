@@ -1,3 +1,18 @@
-首页<label>{{x}}</label>
-<hello-word></hello-word>
-<label ng-bind="z|limitLength:2"></label>
+<link rel='stylesheet' href='/src/modules/indexManager/css/index.css' />
+<div class="index-full">
+    <div class="row-div">
+        <div class="first-div">
+            <div class="first-title">
+                <label>图片</label>
+                <span ng-click="changeData()">>>更多</span>
+            </div>
+            <div class="swipersDiv">
+                <swipers class="pic" data="slides"></swipers>
+            </div>
+        </div>
+        <div class="second-div">
+            <hello-word></hello-word>
+        </div>
+        <div class=""></div>
+    </div>
+</div>

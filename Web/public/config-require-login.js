@@ -12,7 +12,7 @@ require.config({
         'oclazyload': '/lib/oclazyload/ocLazyLoad.min',
         //配置文件夹
         'ctrls': '/src/modules',
-        
+        'crypto':'/lib/crypto/crypto-js',
         //公共服务
         'config':'/src/services/config-service',
         'http':'/src/common/services/httpCommonService',
@@ -30,7 +30,7 @@ require.config({
         'ui-bootstrap-tpls': ['angular', 'ui-bootstrap'],
         'oclazyload': ['angular'],
         'common-module': ['angular'],
-        'login-module': ['angular', 'oclazyload','angular-animate', 'angular-cookies', 'angular-ui-router', 'ui-bootstrap-tpls', 'common-module'],
+        'login-module': ['angular', 'oclazyload','angular-animate', 'angular-cookies', 'angular-ui-router', 'ui-bootstrap-tpls', 'common-module','crypto'],
     },
     deps: ['src/bootstraps/loginBootstrap.js']
 });

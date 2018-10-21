@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Blog.BlogCore.Mapping.SystemManager
 {
-    public class UsersMap:ClassMap<Users>
+    public class UsersMap:ClassMap<UserInfo>
     {
         public UsersMap() {
             Not.LazyLoad();

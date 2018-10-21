@@ -11,7 +11,7 @@ namespace Blog.BlogCore.Entites.SystemManager
     /// 用户表
     /// </summary>
     [DataContract]
-    public class Users
+    public class UserInfo
     {
         /// <summary>
         /// 主键

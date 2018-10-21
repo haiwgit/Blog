@@ -3,14 +3,16 @@
 
 <head>
   <title>{{ title }}</title>
-  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
   <link rel='stylesheet' href='/src/modules/common/css/default.css' />
   <link rel='stylesheet' href='/src/modules/common/css/common.css' />
   <link rel='stylesheet' href='/lib/bootstrap/css/bootstrap.css' />
   <link rel='stylesheet' href='/lib/bootstrap/css/bootstrap.min.css' />
+   <link rel='stylesheet' href='/lib/swiper/css/swiper.css' />
   <script src="/lib/jquery/jquery-3.3.1.min.js"></script>
   <script src="/lib/bootstrap/js/bootstrap.js"></script>
   <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/lib/swiper/js/swiper.min.js"></script>
   <script src="/lib/require.js" defer async data-main="config-require-index.js"></script>
 </head>
 

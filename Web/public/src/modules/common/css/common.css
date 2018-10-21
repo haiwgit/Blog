@@ -12,7 +12,7 @@
     height: calc(100% - 65px);
     height: -moz-calc(100% - 65px);
     height: -webkit-calc(100% - 65px);
-    background-color: #f0eef5;
+    background-color: #c7c7c7;
 }
 .view-div{
     width: calc(100% - 10px);
